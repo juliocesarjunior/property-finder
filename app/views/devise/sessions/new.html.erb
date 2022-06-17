@@ -1,43 +1,22 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)), class: "form-signin" do |f| %>
-<form class="form-signin">
-  <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="inputEmail" class="sr-only">Email</label>
-      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" autocomplete: "email" %>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <%= f.password_field :password, autocomplete: "current-password" class: "form-control"%>
+<section class="form-auth text-center">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email</label>
+      <%= f.email_field :email, autofocus: true, class: "form-control", id:"inputEmail" , placeholder: "Email", autocomplete: "email"%>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
-</form>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control", id:"inputPassword"%>
 
-
-<h2>Log in</h2>
-  <div class="field">
-    <%= f.label :email %><br />
-
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+    </form>
+  <% end -%>
 
 <%= render "devise/shared/links" %>
+</section>
