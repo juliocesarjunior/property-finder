@@ -12,9 +12,14 @@
 
   <body>
 
+    <% if ["public", "devise"].include?(controller.controller_name) %>
     <header>
-    <%= render "layouts/nav/public" %>
+      <%= render "layouts/nav/public" %>
     </header>
+    <% else %>
+      <%=render "layouts/nav/dashboard" %>
+    <% end -%>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
