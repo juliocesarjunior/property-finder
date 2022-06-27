@@ -1,3 +1,3 @@
 class Property < ApplicationRecord
-	belongs_to :accounts
+	belongs_to :account
 end
