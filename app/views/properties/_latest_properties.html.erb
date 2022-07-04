@@ -1,0 +1,13 @@
+<% @properties.each do |property| %>
+	<div class="col-3">
+		<%#= property_thumbnail property%>
+		<% if property.photo.blank? %>
+			<img src="/assets/profile.png" width="300" height="auto" class="borderR" />
+			<% else %>
+			<img src="<%= property.photo.url %>" width="300" height="auto"/>
+		<% end %>
+		<h3 class="h5 mt-3"><%= property.name %></h3>
+		<p><%= property.address %></p>
+
+	</div>
+<% end -%>
