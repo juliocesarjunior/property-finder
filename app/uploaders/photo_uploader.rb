@@ -42,14 +42,14 @@ class PhotoUploader < CarrierWave::Uploader::Base
   ## Tamanhos que o CarrierWave vai salvar as imagens
 
   # Thumb Pequena
-  version :thumb do
-   process resize_to_fit: [50, 50]
-  end
+  # version :thumb do
+  #  process resize_to_fit: [50, 50]
+  # end
 
-  # Medium
-  version :medium do
-   process resize_to_fit: [150, 150]
-  end
+  # # Medium
+  # version :medium do
+  #  process resize_to_fit: [150, 150]
+  # end
 
   # Big
   version :big do
