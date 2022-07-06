@@ -13,4 +13,8 @@
 #prop-details {
 	height: 150px;
 	overflow: hidden;
+
+	&.open{
+		height: auto;
+	}
 }

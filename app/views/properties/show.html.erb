@@ -35,7 +35,7 @@
       <div class="row border-top border-bottom mt-5 mb-5 pt-4 pb-4">
         <div class="col-6">
           <strong class="text-success">
-            <%= link_to "Est. Monthle Repayments of #{number_to_currency((@property.price/360), precision: 0)} ", "#", class: "text-success" %>
+            <%= link_to "Est. Monthle Repayments of #{number_to_currency((@property.price-(@property.price*0.1))/360, precision: 0)} ", "#", class: "text-success" %>
           </strong>
         </div>
         <div class="col-6 text-right">
@@ -51,13 +51,8 @@
           <%= simple_format @property.details %>
           </div>
 
-          <button class="btn btn-outline-info mt3">Show More</button>
-          <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button class="btn btn-outline-info mt3" id="toggleDetails">Show More</button>
+          <p class="mt-5">*This rate is based on a 30 year nortgage, after paying an initial 10% down payment. Shorter term mortages would require a higher monthly repayment. </p>
         </div>
       </div>
     </div>

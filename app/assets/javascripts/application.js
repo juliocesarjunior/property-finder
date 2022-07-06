@@ -14,4 +14,18 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-javascript_include_tag :properties
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+
+
+
+$(function(){
+
+	$("#toggleDetails").on("click", function(){
+		var details = $("#prop-details");
+
+		details.toggleClass("open")	
+	})
+});
