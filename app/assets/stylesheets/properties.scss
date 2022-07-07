@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .property-thumb{
-	//height: 169px;
+	height: 170px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
 }
 
 .property-main-photo{
