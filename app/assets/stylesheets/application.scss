@@ -16,3 +16,8 @@
  */
 @import "bootstrap";
 @import 'font-awesome';
+
+
+.alert-dismissible {
+  padding-left: $close-font-size + $alert-padding-x * 2;
+}
