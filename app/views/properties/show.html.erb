@@ -52,7 +52,7 @@
           <p>Loading...</p>
           <% else %>
           <div id="prop-details">
-          <%= simple_format @property.details %>
+            <%= simple_format @property.details %>
           </div>
 
           <button class="btn btn-outline-info mt3" id="toggleDetails">Show More</button>
@@ -67,3 +67,12 @@
     </div>
   </div>
 </div>  
+
+
+  <section id="latest-properties" class="mb-5">
+    <div class="container">
+      <div class="row">
+      <%= render "properties/list", properties: @agent_properties %>
+      </div>
+    </div>
+  </section>
