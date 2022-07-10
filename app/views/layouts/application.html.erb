@@ -36,7 +36,6 @@
  -->    <!--p class="alert"><%= alert %></p-->
 
 
-    <%= render "layouts/footer" %>
     <!-- Alerta -->
     <% flash.each do |key, message| %>
     <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
@@ -47,6 +46,7 @@
     </div>
     <% end %>
 
+    <%= render "layouts/footer" %>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>feather.replace()</script>
   </body>
