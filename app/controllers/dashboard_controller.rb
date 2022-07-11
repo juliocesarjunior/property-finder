@@ -8,7 +8,7 @@ class DashboardController < ApplicationController
     @account = Account.find(params[:id])
   end
 
-  # private
+  private
   def set_sidebar
     @show_sidebar = true
   end
