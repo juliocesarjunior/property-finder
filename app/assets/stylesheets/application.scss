@@ -18,6 +18,14 @@
 @import 'font-awesome';
 
 
-.alert-dismissible {
-  padding-left: $close-font-size + $alert-padding-x * 2;
+ @keyframes hide {
+  from { opacity: 1 };
+  to   { opacity: 0 };
 }
+ .message{
+  position: absolute;
+  z-index: 900;
+  top: 50px;
+  right: 10px;
+  animation: hide 2s 2s forwards;
+ }

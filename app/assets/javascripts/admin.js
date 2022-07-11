@@ -2,6 +2,11 @@ $(function(){
 	$("body").on("click", "#toggleDetails", function(){
 		var details = $("#prop-details");
 
-		details.toggleClass("open")	
+		details.toggleClass("open");
+		if(details.hasClass("open")){
+			$(this).text("Show less")
+		}else{
+			$(this).text("Show more")
+		}
 	})
 });

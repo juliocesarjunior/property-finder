@@ -4,7 +4,11 @@ class DashboardController < ApplicationController
   def index
   end
 
-  private
+  def profile
+    @account = Account.find(params[:id])
+  end
+
+  # private
   def set_sidebar
     @show_sidebar = true
   end
