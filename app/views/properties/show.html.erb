@@ -67,7 +67,10 @@
         <button class="btn btn-outline-info mt3" id="toggleDetails">Show More</button>
 
         <% end -%>
+
+        <% if @property.for_sale %>
         <p class="mt-5">*This rate is based on a 30 year nortgage, after paying an initial 10% down payment. Shorter term mortages would require a higher monthly repayment. </p>
+        <% end -%>
       </div>
     </div>
   </div>
@@ -89,3 +92,5 @@
     </div>
   </div>
 </section>
+
+<%= render "properties/send_email_modal" %>
