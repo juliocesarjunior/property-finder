@@ -20,9 +20,10 @@ $(function(){
 		var agent_id = $("#agent_id").val(),
 			first_name = $("#message-first-name").val(),
 			last_name = $("#message-last-name").val(),
-			message = $("#message-text").val(),
+			email = $("#message-email").val(),
+			message = $("#message-text").val();
 
-		$;ajax({
+		$.ajax({
 			url: "/agent/message",
 			method: "POST",
 			dataType: "json",
@@ -30,10 +31,14 @@ $(function(){
 				agent_id: agent_id,
 				first_name: first_name,
 				last_name: last_name,
+				email: email,
 				message: message
-			}
+			},
+			// Messagem enviado com sucesso com HTML e JS
 			success: function(data){
-				console.log(data);
+				$('#contact-modal form').remove();
+				$('#send-message-to-agent').remove();
+				$('#contact-modal .modal-body').html("<p>Your message has been sent successfully!</p>");
 			}
 		});
 	});
