@@ -4,6 +4,12 @@ class Property < ApplicationRecord
 
 	scope :latest, -> { order created_at: :desc }
 
+  scope :sold, -> { where(for_sale: true, status: "sold") }
+  scope :for_sale, -> { where(for_sale: true, status: "available")  }
+  scope :leased, -> { where(for_sale: false, status: "leased")  }
+  scope :for_rent, -> { where(for_sale: false, status: "available" ) }
+
+
 	def details
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
