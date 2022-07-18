@@ -8,7 +8,7 @@ module ApplicationHelper
 		bootstrap_alert_class = {
 			"success" => "alert-success",
 			"error" => "alert-danger",
-			"notice" => "alert-info",
+			"notice" => "alert-success",
 			"danger" => "alert-danger",
 			"warn" => "alert-warning"
 		}
